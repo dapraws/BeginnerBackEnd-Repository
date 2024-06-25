@@ -1,13 +1,15 @@
-const initialMemoryUsage = // TODO 1
-const yourName = // TODO 2
-const environment = // TODO 3
- 
-for(let i = 0; i <= 10000; i++) {
-// Proses looping ini akan membuat penggunaan memori naik
+const initialMemoryUsage = process.memoryUsage().heapUsed;
+const yourName = process.argv[2];
+const environment = process.env.NODE_ENV;
+
+for (let i = 0; i <= 10000; i++) {
+  // Proses looping ini akan membuat penggunaan memori naik
 }
- 
-const currentMemoryUsage = // TODO 4
- 
+
+const currentMemoryUsage = process.memoryUsage().heapUsed;
+
 console.log(`Hai, ${yourName}`);
-console.log(`Mode environment: ${environment}`)
-console.log(`Penggunaan memori dari ${initialMemoryUsage} naik ke ${currentMemoryUsage}`);
+console.log(`Mode environment: ${environment}`);
+console.log(
+  `Penggunaan memori dari ${initialMemoryUsage} naik ke ${currentMemoryUsage}`
+);
